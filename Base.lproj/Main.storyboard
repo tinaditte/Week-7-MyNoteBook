@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyNotebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-9R-Kez">
+                                <rect key="frame" x="87" y="136" width="240" height="167"/>
+                                <color key="backgroundColor" red="0.93487663170388169" green="0.98039215690000003" blue="0.96874427517868378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFl-A4-gNA">
+                                <rect key="frame" x="87" y="311" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savebtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZ3-jH-aaA"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c45-Nl-4cG">
+                                <rect key="frame" x="87" y="379" width="240" height="423"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" id="KK6-O2-ZSM">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KK6-O2-ZSM" id="KHB-5r-I0C">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My NoteBook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx8-4i-qgE">
+                                <rect key="frame" x="87" y="69" width="240" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="c45-Nl-4cG" firstAttribute="top" secondItem="qFl-A4-gNA" secondAttribute="bottom" constant="38" id="17s-Yy-PVa"/>
+                            <constraint firstItem="kx8-4i-qgE" firstAttribute="trailing" secondItem="EIM-9R-Kez" secondAttribute="trailing" id="1mL-nl-Ph6"/>
+                            <constraint firstItem="qFl-A4-gNA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="9Zi-Bc-93q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EIM-9R-Kez" secondAttribute="bottom" constant="559" id="EGC-F3-B0q"/>
+                            <constraint firstItem="kx8-4i-qgE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Lkn-PC-xES"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c45-Nl-4cG" secondAttribute="bottom" constant="60" id="RcR-Qu-vO4"/>
+                            <constraint firstItem="EIM-9R-Kez" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="RyM-NG-ax1"/>
+                            <constraint firstItem="kx8-4i-qgE" firstAttribute="leading" secondItem="EIM-9R-Kez" secondAttribute="leading" id="Uxq-vq-J8J"/>
+                            <constraint firstItem="c45-Nl-4cG" firstAttribute="leading" secondItem="qFl-A4-gNA" secondAttribute="leading" id="c5V-yW-4Bn"/>
+                            <constraint firstItem="c45-Nl-4cG" firstAttribute="trailing" secondItem="EIM-9R-Kez" secondAttribute="trailing" id="eWJ-TA-87S"/>
+                            <constraint firstItem="EIM-9R-Kez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="elp-e7-Jel"/>
+                            <constraint firstItem="qFl-A4-gNA" firstAttribute="top" secondItem="EIM-9R-Kez" secondAttribute="bottom" constant="8" id="fda-pL-UQ8"/>
+                            <constraint firstItem="EIM-9R-Kez" firstAttribute="top" secondItem="kx8-4i-qgE" secondAttribute="bottom" constant="8" id="jxe-Ot-X7s"/>
+                            <constraint firstItem="EIM-9R-Kez" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="vCy-uD-2m4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="kx8-4i-qgE" id="fbB-PO-LM0"/>
+                        <outlet property="myNote" destination="EIM-9R-Kez" id="PFb-fj-Jdb"/>
+                        <outlet property="notebookoverview" destination="c45-Nl-4cG" id="1cx-W4-g8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>
